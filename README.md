@@ -3,6 +3,13 @@
 # ComfyUI
 **The most powerful and modular diffusion model GUI and backend.**
 
+## Introduction
+ComfyUI is a powerful and modular diffusion model GUI and backend that allows you to design advanced Stable Diffusion workflows using a simple graph/node-based interface. This project aims to demonstrate how you can transform images into Van Gogh-style artwork using ComfyUI, Stable Diffusion, and ControlNet.
+
+With this guide, you'll be able to:
+- Set up ComfyUI on your local machine.
+- Download and integrate Stable Diffusion models.
+- Create and execute workflows for image style transformation.
 
 
 [matrix-shield]: https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white
@@ -98,6 +105,23 @@ Below is the ComfyUI workflow that was created for transforming images into Van 
 
 </div>
 
+## Features
+- **Graph/Node-based Interface**: Easily design complex workflows using a drag-and-drop interface.
+- **Stable Diffusion Support**: Fully supports SD1.x, SD2.x, and SDXL models.
+- **GPU & CPU Support**: Works efficiently with both NVIDIA and AMD GPUs, and has a CPU fallback mode.
+- **Memory Optimization**: Automatically manages memory to run models on devices with as low as 1GB of VRAM.
+- **Modular**: Supports multiple extensions like ControlNet, Loras, and Inpainting.
+- **Save/Load Workflows**: Easily save and load workflows, and even load them from generated PNG, WebP, and FLAC files.
+
+## How It Works
+
+The ComfyUI-based workflow allows you to upload an image (JPEG or PNG), which is then processed by Stable Diffusion with the help of ControlNet to transform it into a Van Gogh-style image.
+
+1. **Upload**: You upload your image to the system.
+2. **Preprocessing**: The image is resized and normalized to ensure it's ready for transformation.
+3. **Style Transfer**: Stable Diffusion and ControlNet are applied to generate the Van Gogh style.
+4. **Output**: The final stylized image is generated and displayed.
+
 ## Before and After Image Transformation
 
 <div align="center">
@@ -118,3 +142,17 @@ Below is the ComfyUI workflow that was created for transforming images into Van 
 
 </div>
 
+## Frequently Asked Questions (FAQ)
+
+**Q1**: What if I encounter a "Torch not compiled with CUDA enabled" error?  
+**A1**: Uninstall your current version of `torch` using `pip uninstall torch` and reinstall it with CUDA support by running the appropriate `pip install` command for your GPU.
+
+**Q2**: Can I use ComfyUI without a GPU?  
+**A2**: Yes, but performance will be significantly slower. You can run it using the `--cpu` flag.
+
+**Q3**: Where can I find more workflow examples?  
+**A3**: You can find various workflow examples on the [ComfyUI Examples page](https://comfyanonymous.github.io/ComfyUI_examples/).
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
