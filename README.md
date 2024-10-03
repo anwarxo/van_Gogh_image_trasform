@@ -1,18 +1,9 @@
-# van_Gogh_image_trasform
-<div align="center">
+<div align="left">
 
 # ComfyUI
 **The most powerful and modular diffusion model GUI and backend.**
 
 
-[![Website][website-shield]][website-url]
-[![Dynamic JSON Badge][discord-shield]][discord-url]
-[![Matrix][matrix-shield]][matrix-url]
-<br>
-[![][github-release-shield]][github-release-link]
-[![][github-release-date-shield]][github-release-link]
-[![][github-downloads-shield]][github-downloads-link]
-[![][github-downloads-latest-shield]][github-downloads-link]
 
 [matrix-shield]: https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white
 [matrix-url]: https://app.element.io/#/room/%23comfyui_space%3Amatrix.org
@@ -29,95 +20,29 @@
 [github-downloads-latest-shield]: https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/latest/total?style=flat&label=downloads%40latest
 [github-downloads-link]: https://github.com/comfyanonymous/ComfyUI/releases
 
-![ComfyUI Screenshot](comfyui_screenshot.png)
-</div>
+
 
 This ui will let you design and execute advanced stable diffusion pipelines using a graph/nodes/flowchart based interface. For some workflow examples and see what ComfyUI can do you can check out:
 ### [ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)
 
 ### [Installing ComfyUI](#installing)
 
-## Features
-- Nodes/graph/flowchart interface to experiment and create complex Stable Diffusion workflows without needing to code anything.
-- Fully supports SD1.x, SD2.x, [SDXL](https://comfyanonymous.github.io/ComfyUI_examples/sdxl/), [Stable Video Diffusion](https://comfyanonymous.github.io/ComfyUI_examples/video/), [Stable Cascade](https://comfyanonymous.github.io/ComfyUI_examples/stable_cascade/), [SD3](https://comfyanonymous.github.io/ComfyUI_examples/sd3/) and [Stable Audio](https://comfyanonymous.github.io/ComfyUI_examples/audio/)
-- [Flux](https://comfyanonymous.github.io/ComfyUI_examples/flux/)
-- Asynchronous Queue system
-- Many optimizations: Only re-executes the parts of the workflow that changes between executions.
-- Smart memory management: can automatically run models on GPUs with as low as 1GB vram.
-- Works even if you don't have a GPU with: ```--cpu``` (slow)
-- Can load ckpt, safetensors and diffusers models/checkpoints. Standalone VAEs and CLIP models.
-- Embeddings/Textual inversion
-- [Loras (regular, locon and loha)](https://comfyanonymous.github.io/ComfyUI_examples/lora/)
-- [Hypernetworks](https://comfyanonymous.github.io/ComfyUI_examples/hypernetworks/)
-- Loading full workflows (with seeds) from generated PNG, WebP and FLAC files.
-- Saving/Loading workflows as Json files.
-- Nodes interface can be used to create complex workflows like one for [Hires fix](https://comfyanonymous.github.io/ComfyUI_examples/2_pass_txt2img/) or much more advanced ones.
-- [Area Composition](https://comfyanonymous.github.io/ComfyUI_examples/area_composition/)
-- [Inpainting](https://comfyanonymous.github.io/ComfyUI_examples/inpaint/) with both regular and inpainting models.
-- [ControlNet and T2I-Adapter](https://comfyanonymous.github.io/ComfyUI_examples/controlnet/)
-- [Upscale Models (ESRGAN, ESRGAN variants, SwinIR, Swin2SR, etc...)](https://comfyanonymous.github.io/ComfyUI_examples/upscale_models/)
-- [unCLIP Models](https://comfyanonymous.github.io/ComfyUI_examples/unclip/)
-- [GLIGEN](https://comfyanonymous.github.io/ComfyUI_examples/gligen/)
-- [Model Merging](https://comfyanonymous.github.io/ComfyUI_examples/model_merging/)
-- [LCM models and Loras](https://comfyanonymous.github.io/ComfyUI_examples/lcm/)
-- [SDXL Turbo](https://comfyanonymous.github.io/ComfyUI_examples/sdturbo/)
-- [AuraFlow](https://comfyanonymous.github.io/ComfyUI_examples/aura_flow/)
-- [HunyuanDiT](https://comfyanonymous.github.io/ComfyUI_examples/hunyuan_dit/)
-- Latent previews with [TAESD](#how-to-show-high-quality-previews)
-- Starts up very fast.
-- Works fully offline: will never download anything.
-- [Config file](extra_model_paths.yaml.example) to set the search paths for models.
 
-Workflow examples can be found on the [Examples page](https://comfyanonymous.github.io/ComfyUI_examples/)
-
-## Shortcuts
-
-| Keybind                            | Explanation                                                                                                        |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| Ctrl + Enter                       | Queue up current graph for generation                                                                              |
-| Ctrl + Shift + Enter               | Queue up current graph as first for generation                                                                     |
-| Ctrl + Alt + Enter                 | Cancel current generation                                                                                          |
-| Ctrl + Z/Ctrl + Y                  | Undo/Redo                                                                                                          |
-| Ctrl + S                           | Save workflow                                                                                                      |
-| Ctrl + O                           | Load workflow                                                                                                      |
-| Ctrl + A                           | Select all nodes                                                                                                   |
-| Alt + C                            | Collapse/uncollapse selected nodes                                                                                 |
-| Ctrl + M                           | Mute/unmute selected nodes                                                                                         |
-| Ctrl + B                           | Bypass selected nodes (acts like the node was removed from the graph and the wires reconnected through)            |
-| Delete/Backspace                   | Delete selected nodes                                                                                              |
-| Ctrl + Backspace                   | Delete the current graph                                                                                           |
-| Space                              | Move the canvas around when held and moving the cursor                                                             |
-| Ctrl/Shift + Click                 | Add clicked node to selection                                                                                      |
-| Ctrl + C/Ctrl + V                  | Copy and paste selected nodes (without maintaining connections to outputs of unselected nodes)                     |
-| Ctrl + C/Ctrl + Shift + V          | Copy and paste selected nodes (maintaining connections from outputs of unselected nodes to inputs of pasted nodes) |
-| Shift + Drag                       | Move multiple selected nodes at the same time                                                                      |
-| Ctrl + D                           | Load default graph                                                                                                 |
-| Alt + `+`                          | Canvas Zoom in                                                                                                     |
-| Alt + `-`                          | Canvas Zoom out                                                                                                    |
-| Ctrl + Shift + LMB + Vertical drag | Canvas Zoom in/out                                                                                                 |
-| P                                  | Pin/Unpin selected nodes                                                                                           |
-| Ctrl + G                           | Group selected nodes                                                                                               |
-| Q                                  | Toggle visibility of the queue                                                                                     |
-| H                                  | Toggle visibility of history                                                                                       |
-| R                                  | Refresh graph                                                                                                      |
-| Double-Click LMB                   | Open node quick search palette                                                                                     |
-| Shift + Drag                       | Move multiple wires at once                                                                                        |
-| Ctrl + Alt + LMB                   | Disconnect all wires from clicked slot                                                                             |
-
-Ctrl can also be replaced with Cmd instead for macOS users
 
 # Installing
 
 
-## Manual Install (Windows, Linux)
+## Installing ComfyUI
 
-Git clone this repo.
+To install ComfyUI, follow these steps:
 
-Put your SD checkpoints (the huge ckpt/safetensors files) in: models/checkpoints
+1. Open your terminal and run the following command to clone the ComfyUI repository and run the application:
 
-Put your VAE in: models/vae
-
-
+   ```bash
+   git clone https://github.com/comfyanonymous/ComfyUI.git
+   cd ComfyUI
+   pip install -r requirements.txt
+   python main.py
 ### AMD GPUs (Linux only)
 AMD users can install rocm and pytorch with pip if you don't have it already installed, this is the command to install the stable version:
 
@@ -162,6 +87,16 @@ To download the Stable Diffusion v1.5 model, follow these steps:
    [Stable Diffusion v1.5 - Hugging Face](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/tree/main)
 
 2. Download the model weights by selecting the `v1-5-pruned-emaonly.safetensors`
+
+## ComfyUI Workflow Screenshot
+
+Below is the ComfyUI workflow that was created for transforming images into Van Gogh-style artwork using Stable Diffusion and ControlNet:
+
+<div align="left">
+
+<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/comfy_workflow.png?raw=true" alt="ComfyUI Workflow" width="700"/>
+
+</div>
 
 ## Before and After Image Transformation
 
