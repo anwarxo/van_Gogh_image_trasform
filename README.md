@@ -101,7 +101,7 @@ Below is the ComfyUI workflow that was created for transforming images into Van 
 
 <div align="left">
 
-<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/comfy_workflow.png?raw=true" alt="ComfyUI Workflow" width="700"/>
+<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/comfy_workflow.png?raw=true" alt="ComfyUI Workflow" width="700"/>
 
 </div>
 
@@ -126,19 +126,19 @@ The ComfyUI-based workflow allows you to upload an image (JPEG or PNG), which is
 
 <div align="center">
 
-<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/lion.jpg?raw=true" alt="Original Image" width="400" height="300"/> ➡️ <img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/lion_after.png?raw=true" alt="Transformed Image" width="400" height="300"/>
+<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/lion.jpg?raw=true" alt="Original Image" width="400" height="300"/> ➡️ <img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/lion_after.png?raw=true" alt="Transformed Image" width="400" height="300"/>
 
 </div>
 
 <div align="center">
 
-<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/village_before.jpg?raw=true" alt="Original Image" width="400" height="280"/> ➡️ <img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/village_after.png?raw=true" alt="Transformed Image" width="400" height="280"/>
+<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/village_before.jpg?raw=true" alt="Original Image" width="400" height="280"/> ➡️ <img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/village_after.png?raw=true" alt="Transformed Image" width="400" height="280"/>
 
 </div>
 
 <div align="center">
 
-<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/elephant_before.jpg?raw=true" alt="Original Image" width="400" height="280"/> ➡️ <img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/elephant_after.png?raw=true" alt="Transformed Image" width="400" height="280"/>
+<img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/elephant_before.jpg?raw=true" alt="Original Image" width="400" height="280"/> ➡️ <img src="https://github.com/anwarxo/van_Gogh_image_trasform/blob/main/images/elephant_after.png?raw=true" alt="Transformed Image" width="400" height="280"/>
 
 </div>
 
